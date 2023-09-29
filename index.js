@@ -22,7 +22,8 @@ function moveDodgerLeft() {
 function moveDodgerRight(){
     const leftNumbers = dodger.style.left.replace("px", "");
     const left = parseInt(leftNumbers, 10);
-    const width = 400 - dodger.offsetWidth;
+    const gameWidth=document.getElementById("game").offsetWidth;
+    const width = gameWidth - dodger.offsetWidth;
 
     if (left !== width) {
     dodger.style.left = `${left +1}px`;
